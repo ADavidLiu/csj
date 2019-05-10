@@ -1,0 +1,145 @@
+.services {
+    padding: 3.333rem 0;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 4px solid $color-gray-lgt-4;
+    @include atMedium {
+        padding: 5rem 0 4.375rem 0;
+        border-bottom: 0;
+    }
+
+    &__shapes {
+        pointer-events: none;
+        position: absolute;
+        max-width: 75%;
+        @include atMedium {
+            max-width: 40%;
+        }
+
+        &--top {
+            bottom: -3.333rem;
+            right: -6.5rem;
+            opacity: .3;
+            @include atMedium {
+                top: -2.5rem;
+                right: 0;
+                bottom: auto;
+                opacity: 1;
+            }
+        }
+
+        &--bottom {
+            display: none;
+            @include atMedium {
+                display: block;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 1.667rem;
+        @include atMedium {
+            margin-bottom: 3.125rem;
+        }
+    }
+
+    &__items {
+        margin-bottom: -.833rem;
+        @include atMedium {
+            margin: 0 -11px;
+            margin-block-end: -30px;
+            align-items: stretch;
+        }
+    }
+
+    &__item {
+        margin-bottom: .833rem;
+        @include atMedium {
+            padding: 0 11px;
+            align-self: stretch;
+            margin-bottom: 30px;
+        }
+
+        &-inner {
+            border: 2px solid $color-gray-lgt-4;
+            border-bottom-width: 6px;
+            text-align: center;
+            border-radius: $radius--lg;
+            padding: 2.9167rem 3.333rem;
+            background-color: $color-white;
+            transition: all .25s;
+            display: block;
+            @include atMedium {
+                padding: 2.5rem 1.5625rem;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $color-gray-lgt-7;
+                box-shadow: 0px 15px 25px rgba(87, 103, 120, 0.09);
+                transform: translateY(-8px);
+            }
+        }
+
+        &-icon {
+            font-size: 3rem;
+            font-style: normal;
+            @include atMedium {
+                font-size: 3.125rem;
+            }
+
+            &--alt {
+                line-height: 1;
+            }
+        }
+
+        &-text {
+            margin: 1.667rem 0 2rem 0;
+            @include atMedium {
+                margin: 1.25rem 0 1.5rem 0;
+            }
+
+            &--alt {
+                margin: 1.25rem 0 1rem 0;
+                @include atMedium {
+                    margin: .9375rem 0 .75rem 0;
+                }
+            }
+        }
+
+        &-title {
+            margin-bottom: 1.667rem;
+            @include atMedium {
+                margin-top: auto;
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+
+    &__others {
+        margin-top: 2.5rem;
+        text-align: center;
+        @include atMedium {
+            display: none;
+        }
+
+        &-title {
+            margin-bottom: 1.5rem;
+        }
+
+        &-links {
+            p + p {
+                margin-top: 5px;
+            }
+        }
+    }
+}

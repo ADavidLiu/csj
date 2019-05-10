@@ -1,0 +1,83 @@
+.form {
+    input,
+    textarea,
+    select {
+        appearance: none;
+        resize: none;
+        border: 1px solid $color-gray-lgt-2;
+        height: 4.167rem;
+        border-radius: $radius;
+        color: $color-dark;
+        transition: all .25s;
+        padding: 0 1.083rem;
+        display: block;
+        width: 100%;
+        @extend .paragraph;
+        @extend .paragraph--md;
+        @include atMedium {
+            height: 3.125rem;
+            padding: 0 1.0625rem;
+        }
+
+        &::placeholder {
+            color: $color-gray-lgt;
+        }
+
+        &.valid,
+        &:valid,
+        &:focus {
+            border-color: $color-primary;
+            box-shadow: inset 0 0 0 1px $color-primary;
+        }
+
+        &.invalid,
+        &:invalid:focus {
+            border-color: $color-error;
+            box-shadow: inset 0 0 0 1px $color-error;
+        }
+    }
+
+    textarea {
+        height: 13.333rem;
+        padding: 1.083rem;
+        @include atMedium {
+            height: 9.5625rem;
+            padding: 1.0625rem;
+        }
+    }
+
+    &__row {
+        margin: -5px;
+        @include atMedium {
+            margin: -7px;
+        }
+    }
+
+    &__column {
+        padding: 5px;
+        @include atMedium {
+            padding: 7px;
+        }
+    }
+
+    &__message {
+        display: none;
+    }
+
+    &__cta {
+        margin-top: 2.9167rem;
+        text-align: center;
+        @include atMedium {
+            margin-top: 3.125rem;
+        }
+
+        .btn {
+            width: 100%;
+            margin: 1.667rem 0;
+            @include atMedium {
+                width: auto;
+                margin: 1.25rem 0 1.875rem 0;
+            }
+        }
+    }
+}

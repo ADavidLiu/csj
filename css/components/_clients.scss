@@ -1,0 +1,44 @@
+.clients {
+    padding-bottom: 3.333rem;
+    @include atMedium {
+        padding-bottom: 4.375rem;
+    }
+
+    &__title {
+        margin-bottom: 1.667rem;
+        @include atMedium {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__item {
+        text-align: center;
+        font-family: $font-main-mono;
+        line-height: 2.2;
+        @extend .paragraph--xs;
+        @include atMedium {
+            text-align: left;
+        }
+    }
+
+    &__cta {
+        text-align: center;
+        margin-top: 2.5rem;
+        @include atMedium {
+            margin-top: 3.4375rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .btn {
+            margin-bottom: 2rem;
+            width: 100%;
+            @include atMedium {
+                margin-right: 1.5rem;
+                margin-bottom: 0;
+                width: auto;
+            }
+        }
+    }
+}

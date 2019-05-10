@@ -1,0 +1,33 @@
+.social-btn {
+    height: 3rem;
+    width: 3rem;
+    min-height: 3rem;
+    min-width: 3rem;
+    border-radius: 50%;
+    background-color: $color-gray-lgt-3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .25s;
+    margin-left: 1rem;
+    @include atMedium {
+        height: 2.25rem;
+        width: 2.25rem;
+        min-height: 2.25rem;
+        min-width: 2.25rem;
+        margin-left: .75rem;
+    }
+
+    &__icon {
+        font-size: 1.667rem;
+        color: $color-dark;
+        @include atMedium {
+            font-size: 1.25rem;
+        }
+    }
+
+    &:hover {
+        background-color: $color-white;
+    }
+}

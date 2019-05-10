@@ -1,0 +1,201 @@
+.header {
+    &__headline {
+        padding: 1.25rem 0;
+        background-color: $color-primary;
+        text-align: center;
+        @include atMedium {
+            padding: .9375rem 0;
+        }
+    }
+
+    &__main {
+        background-color: $color-white;
+        transition: all .25s;
+        padding-top: 2.333rem;
+        @include atMedium {
+            padding-top: 1.75rem;
+        }
+
+        &.scroll-to-fixed-fixed {
+            padding: 1rem 0;
+            box-shadow: 0px 3px 8px rgba($color-black, 0.09), 0px 2px 0px $color-gray-lgt-4;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &-actions {
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-end;
+        }
+    }
+
+    &__logo {
+        font-family: $font-titles;
+        font-weight: 700;
+        font-size: 3rem;
+        color: $color-dark;
+        line-height: 1;
+        position: relative;
+        backface-visibility: hidden;
+        transition: all .25s;
+        @include linkStates($color-dark, none);
+        @include atMedium {
+            font-size: 2.25rem;
+        }
+
+        &-wrapper {
+            &:hover {
+                .header__logo {
+                    &--trigger {
+                        @include atMedium {
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+                    }
+
+                    &--hover {
+                        @include atMedium {
+                            opacity: 1;
+                            pointer-events: all;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-emoji {
+            pointer-events: none;
+            backface-visibility: hidden;
+        }
+
+        &-company,
+        &-name {
+            transition: opacity .25s, transform .5s;
+            transform-origin: 0 50%;
+            display: inline-block;
+            backface-visibility: hidden;
+        }
+
+        &-name {
+            transform: translateX(-5px);
+            opacity: 0;
+            position: absolute;
+        }
+
+        &:hover {
+            /* .header__logo {
+                &-company {
+                    @include atMedium {
+                        opacity: 0;
+                        transform: translateX(-5px);
+                        position: absolute;
+                        pointer-events: none;
+                    }
+                }
+
+                &-name {
+                    @include atMedium {
+                        transform: none;
+                        opacity: 1;
+                        position: static;
+                    }
+                }
+            } */
+        }
+
+        &--hover {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all .25s;
+            pointer-events: none;
+            display: none;
+            @include atMedium {
+                display: block;
+            }
+        }
+    }
+
+    &__btn {
+        line-height: 1;
+        height: 4.167rem;
+        padding-left: 8px;
+        padding-right: 8px;
+        @include atMedium {
+            height: 3.125rem;
+            padding-left: 1.875rem;
+            padding-right: 1.875rem;
+        }
+    }
+
+    &__trigger {
+        height: 4.167rem;
+        width: 4.167rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        border: 2px solid $color-dark;
+        border-radius: $radius;
+        margin-left: 5px;
+        transition: all .25s;
+        background: transparent;
+        @include atMedium {
+            display: none;
+        }
+
+        &-lines {
+            position: relative;
+        }
+
+        &-line {
+            width: 2.083rem;
+            height: 3px;
+            display: block;
+            background-color: $color-dark;
+            transition: all .25s;
+
+            & + & {
+                margin-top: 4px;
+            }
+        }
+
+        &-label {
+            margin: 0;
+            margin-top: 5px;
+            text-transform: uppercase;
+            color: $color-dark;
+            font-size: 8px;
+            font-weight: 700;
+            font-family: $font-main;
+            line-height: 1;
+            transition: all .25s;
+        }
+
+        &:hover {
+            background-color: $color-dark;
+
+            .header__trigger {
+                &-line {
+                    background-color: $color-white;
+                }
+
+                &-label {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}

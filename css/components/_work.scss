@@ -1,0 +1,127 @@
+.work {
+    padding: 3.333rem 0 2.5rem 0;
+    position: relative;
+    @include atMedium {
+        padding: 0 0 5.625rem 0;
+    }
+
+    &__shapes {
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include atMedium {
+            right: auto;
+            left: 0;
+            top: 1rem;
+            transform: translateX(-30%);
+        }
+    }
+    
+    &__intro {
+        text-align: center;
+        margin-bottom: 2.25rem;
+        @include atMedium {
+            text-align: left;
+            margin-bottom: 2.625rem;
+        }
+
+        &-btn {
+            margin-top: 1.667rem;
+            width: 100%;
+            @include atMedium {
+                margin-top: 0;
+                width: auto;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 1.667rem;
+        @include atMedium {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__samples {
+        margin-bottom: -1.167rem;
+        position: relative;
+        @include atMedium {
+            margin: 0 -11px -20px -11px;
+        }
+    }
+
+    &__sample {
+        text-align: center;
+        margin-bottom: 1.167rem;
+        @include atMedium {
+            align-self: stretch;
+            padding: 0 11px;
+            margin-bottom: 20px;
+        }
+
+        &-inner {
+            background-color: $color-gray-lgt-4;
+            border: 2px solid $color-gray-lgt-4;
+            border-radius: $radius--lg;
+            overflow: hidden;
+            transition: all .25s;
+            @include atMedium {
+                height: 100%;
+            }
+
+            &:hover {
+                border-color: $color-gray-lgt-7;
+                box-shadow: 0px 15px 25px rgba(87, 103, 120, 0.09);
+            }
+        }
+
+        &-content {
+            padding: 3.333rem;
+            @include atMedium {
+                padding: 2.5rem;
+            }
+        }
+
+        &-banner {
+            width: 100%;
+            display: none;
+            @include atMedium {
+                display: block;
+                height: 15rem;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center bottom;
+            }
+        }
+
+        &-logo {
+            margin-bottom: 2.083rem;
+            @include atMedium {
+                margin-bottom: 1.5625rem;
+                height: 3.125rem;
+            }
+        }
+
+        &-subtitle {
+            @include atMedium {
+                margin: 1.875rem 0 1rem 0;
+            }
+        }
+
+        &--big {
+            .work__sample {
+                &-content {
+                    @include atMedium {
+                        padding: 1.25rem 3.125rem 2.5rem 3.125rem;
+                    }
+                }
+
+                &-logo {
+                    @include atMedium {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

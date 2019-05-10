@@ -1,0 +1,122 @@
+.footer {
+    background-color: $color-dark;
+    position: relative;
+
+    &__shapes {
+        display: none;
+        @include atMedium {
+            display: block;
+            position: absolute;
+            top: 20%;
+            right: -15rem;
+            transform: translateY(-20%);
+            pointer-events: none;
+        }
+        @include atExtralarge {
+            right: -10rem;
+        }
+        @include atHuge {
+            right: 0;
+        }
+    }
+    
+    &__main {
+        padding: 3.333rem 0;
+        margin-bottom: -3.333rem;
+        @include atMedium {
+            padding: 6.25rem 0 5.5rem 0;
+            margin-bottom: -4.375rem;
+        }
+    }
+
+    &__group {
+        margin-bottom: 3.333rem;
+        @include atMedium {
+            margin-bottom: 4.375rem;
+        }
+
+        td {
+            padding: 0 0 5px 0;
+            vertical-align: middle;
+            @include atMedium {
+                padding-bottom: .75rem;
+            }
+
+            &:first-child {
+                padding-right: 1rem;
+                @include atMedium {
+                    padding-right: .75rem;
+                }
+            }
+        }
+
+        tr {
+            &:last-child {
+                td {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        &-main {
+            padding: 1.25rem 0;
+            @include atMedium {
+                padding: 1.5625rem 0;
+            }
+        }
+    }
+
+    &__reading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-img {
+            width: 8.333rem;
+            margin-right: 1.833rem;
+            @include atMedium {
+                width: 7.25rem;
+                 margin-right: 1.625rem;
+            }
+        }
+
+        &-copy {
+            flex: 1;
+        }
+
+        &-title {
+            margin: 10px 0;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        font-weight: 400;
+        @include atMedium {
+            width: auto;
+        }
+    }
+
+    &__sub {
+        padding: 4.583rem 0;
+        text-align: center;
+        border-top: 4px solid $color-dark-2;
+        @include atMedium {
+            padding: 4.0625rem 0;
+        }
+
+        &-mid {
+            margin: 1.083rem 0 1.9167rem 0;
+            @include atMedium {
+                margin: .8125rem 0 1.375rem 0;
+            }
+        }
+
+        &-link {
+            &:hover {
+                color: $color-white;
+                @include linkStates($color-white, none);
+            }
+        }
+    }
+}

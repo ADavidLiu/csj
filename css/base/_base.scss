@@ -1,0 +1,171 @@
+html,
+body {
+    overflow-x: hidden;
+    font-size: 12px;
+    @include atSmall {
+        font-size: 13px;
+    }
+    @include atExtralarge {
+        font-size: 16px;
+    }
+}
+
+html {
+    background-color: $color-primary;
+}
+
+body {
+    background-color: $color-white;
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 3.75rem;
+    @include atLarge {
+        margin-top: 7.1875rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @extend .heading-primary;
+}
+
+h2 {
+    @extend .heading-secondary;
+}
+
+h3 {
+    @extend .heading-tertiary;
+}
+
+h4 {
+    @extend .heading-quaternary;
+}
+
+h5 {
+    @extend .heading-quinary;
+}
+
+p,
+li {
+    @extend .paragraph;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+a {
+    transition: all .25s;
+    cursor: pointer;
+    @include linkStates($color-primary, none);
+
+    &:hover {
+        color: $color-dark;
+    }
+
+    &.u-color-white {
+        color: $color-white;
+        @include linkStates($color-white, none);
+
+        &:hover {
+            color: $color-accent-4;
+        }
+    }
+    
+    &.u-color-accent-3 {
+        color: $color-accent-3;
+        @include linkStates($color-accent-3, none);
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+    
+    &.u-color-accent-4 {
+        color: $color-accent-4;
+        @include linkStates($color-accent-4, none);
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+    
+    &.u-color-accent-5 {
+        color: $color-accent-5;
+        @include linkStates($color-accent-5, none);
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    &.u-color-gray-lgt {
+        color: $color-gray-lgt;
+        @include linkStates($color-gray-lgt, none);
+
+        &:hover {
+            color: $color-accent-4;
+        }
+    }
+    
+    &.u-color-dark {
+        color: $color-dark;
+        @include linkStates($color-dark, none);
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &.u-underline {
+        text-decoration: underline !important;
+
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+input,
+button,
+select,
+textarea {
+    border: none;
+
+    &:focus {
+        outline: none !important;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

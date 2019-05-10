@@ -1,0 +1,66 @@
+.btn {
+    padding: 1.25rem 1.667rem 1rem 1.667rem;
+    background-color: $color-primary;
+    border-radius: $radius;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    cursor: pointer;
+    transition: all .25s;
+    font-family: $font-main;
+    font-size: 1.333rem;
+    font-weight: 700;
+    @include linkStates($color-white, none);
+    @include atMedium {
+        padding: .75rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    &:hover {
+        background-color: $color-dark;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        transform: translateY(-8px);
+    }
+
+    &--drk {
+        background-color: $color-dark;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-dark;
+        }
+    }
+
+    &--ghost {
+        border: 2px solid $color-dark;
+        background-color: transparent;
+        color: $color-dark;
+        @include linkStates($color-dark, none);
+
+        &:hover {
+            background-color: $color-dark;
+            color: $color-white;
+        }
+    }
+
+    &--ghost-drk {
+        border-color: $color-gray;
+        color: $color-white;
+        @include linkStates($color-white, none);
+
+        &:hover {
+            background-color: $color-gray;
+        }
+    }
+}

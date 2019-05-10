@@ -1,0 +1,16 @@
+.why {
+    padding: 3.333rem 0;
+    border-bottom: 4px solid $color-gray-lgt-4;
+    overflow: hidden;
+    @include atMedium {
+        padding: 0 0 4.6875rem 0;
+        border-bottom: 0;
+    }
+    
+    &__title {
+        margin-bottom: 1.667rem;
+        @include atMedium {
+            margin-bottom: 1.875rem;
+        }
+    }
+}

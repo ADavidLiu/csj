@@ -1,0 +1,76 @@
+// Colors
+$color-primary: #153CB9;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-dark: #0D0D0D;
+$color-dark-2: #202020;
+
+$color-gray: #565656;
+$color-gray-lgt: #8B8B8B;
+$color-gray-lgt-2: #B7B7B7;
+$color-gray-lgt-3: #DADADA;
+$color-gray-lgt-4: #EBEEF1;
+$color-gray-lgt-5: #DFE4E9;
+$color-gray-lgt-6: #DDE1E4;
+$color-gray-lgt-7: #DEE3E8;
+$color-gray-lgt-8: #E5E5E5;
+
+$color-accent-1: #FDDDE9;
+$color-accent-2: #FEB400;
+$color-accent-3: #00C124;
+$color-accent-4: #FFDF00;
+$color-accent-5: #6483E9;
+$color-accent-6: #00ABCB;
+$color-accent-7: #D372DF;
+
+$color-error: #DF7272;
+
+
+// Typography
+@font-face {
+    font-family: "MaisonNeue";
+    font-weight: 400;
+    src: url("../fonts/MaisonNeue-Book.ttf");
+}
+
+@font-face {
+    font-family: "MaisonNeue";
+    font-weight: 500;
+    src: url("../fonts/MaisonNeue-Medium.ttf");
+}
+
+@font-face {
+    font-family: "MaisonNeue";
+    font-weight: 600;
+    src: url("../fonts/MaisonNeue-Demi.otf");
+}
+
+@font-face {
+    font-family: "MaisonNeue";
+    font-weight: 700;
+    src: url("../fonts/MaisonNeue-Bold.ttf");
+}
+
+@font-face {
+    font-family: "MaisonNeueMono";
+    font-weight: 400;
+    src: url("../fonts/MaisonNeue-Mono.ttf");
+}
+
+@font-face {
+    font-family: "Roslindale";
+    font-weight: 700;
+    src: url("../fonts/Roslindale.otf");
+}
+
+$font-main: "MaisonNeue", "Helvetica", "Arial", sans-serif;
+$font-main-mono: "MaisonNeueMono", "Courier New", monospace;
+
+$font-titles: "Roslindale", "Times New Roman", serif;
+
+
+// Measurements
+$radius: 5px;
+$radius--lg: 8px;

@@ -1,0 +1,25 @@
+.bio {
+    text-align: center;
+    background-color: $color-gray-lgt-4;
+    padding: 3.75rem 0 4.167rem 0;
+    @include atMedium {
+        padding: 5rem 0 4.375rem 0;
+    }
+
+    &__img {
+        height: 12.5rem;
+        width: 12.5rem;
+        border-radius: 50%;
+        @include atMedium {
+            height: 9.375rem;
+            width: 9.375rem;
+        }
+    }
+
+    &__title {
+        margin: 2.5rem 0 1.667rem 0;
+        @include atMedium {
+            margin: 1.875rem 0 1.25rem 0;
+        }
+    }
+}
